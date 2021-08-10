@@ -1,12 +1,16 @@
 * Setup
-1. Download webdriver for your browser make sure it's version is
-   compatible with your browsers version
-   + firefox `https://github.com/mozilla/geckodriver/releases`
+1. Download webdriver for your browser
+Make sure it's version is compatible with your browsers
+version. ChromeDriver releases share version numbers with compadiable
+versions.
+   + Firefox [[https://github.com/mozilla/geckodriver/releases][Geckodriver]]
+   + Chrome [[https://sites.google.com/a/chromium.org/chromedriver/downloads][Chromedriver]]
 2. Extract to path
-   + Alternitively you can tell selanium the location of the webdriver
+Extract the webdriver zip you downloaded to a location in your path.
+   + Alternitively you can tell selenium the location of the webdriver
      executable.
-2. create a virual envroyment for selanium `python3 -m venv webdriver`
-2. install selanium `pip3 install selenium`
+2. create a virual envroyment for selenium `python3 -m venv webdriver`
+2. install selenium `pip3 install selenium`
 
 * Browser foreground
   #+begin_src python :results output :tangle ./Sydney_Temperature.py
@@ -25,7 +29,7 @@ print(f"Sydney max forecast: {elem2.get_attribute('innerText')} degrees centergr
 driver.quit()
   #+end_src
 * Browser Background
-  when running automated browsers in background processes you need to use chrome or equlivelent options to set the browser to headerless.
+  When running automated browsers in background processes you need to use chrome's `--headerless` option or equlivelent options to set the browser to headerless.
   #+begin_src python :results output :tangle ./Random_Quote.py
 from selenium import webdriver
 import random
